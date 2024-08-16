@@ -1,8 +1,8 @@
 # myUNT Scraper
 
-kevin did all of it　（He Did I saw it - Esponzi）
+Web scraper tool for visualizing and analyzing aggregated student schedule data on myUNT
 
-## Dependencies
+### Dependencies
 
 - Python 3.11
 
