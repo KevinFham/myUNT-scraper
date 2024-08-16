@@ -1,0 +1,12 @@
+name: webscraper
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.11.9
+  - selenium==4.11.2
+  - pandas
+  - numpy
+  - seaborn
+  - matplotlib
+  - bs4
