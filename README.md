@@ -19,7 +19,7 @@ Web scraper tool for visualizing and analyzing aggregated student schedule data 
 - Log into myUNT and automate. This will save and update `.html` files within `./course` for parsing
 
   ```sh
-  python3 scraper.py -t "2024 Fall" -x 1 -y 7 CSCE EENG BMEN MEEN MTSE  
+  python3 scripts/scraper.py -t "2024 Fall" -x 1 -y 7 CSCE EENG BMEN MEEN MTSE  
   ```
 
 ### `htmlparser.py`
@@ -27,7 +27,7 @@ Web scraper tool for visualizing and analyzing aggregated student schedule data 
 - Parse `.html` files within `./course` and populate `ENG_course_catalog_database.csv`
 
   ```sh
-  python3 htmlparser.py
+  python3 scripts/htmlparser.py
   ```
 
 ### `schedulepacker.py`
@@ -35,7 +35,7 @@ Web scraper tool for visualizing and analyzing aggregated student schedule data 
 - Pack courses in the `.csv` into usable `class_schedules.npz` and `room_bookings.npz` files
 
   ```sh
-  python3 schedulepacker.py
+  python3 scripts/schedulepacker.py
   ```
 
 ### `heatmap.py` or `roombookingview.py` to view analytics
@@ -47,6 +47,6 @@ Web scraper tool for visualizing and analyzing aggregated student schedule data 
 
   ## or ##
 
-  python3 heatmap.py CSCE EENG
-  python3 roombookingview.py B242
+  python3 scripts/heatmap.py CSCE EENG
+  python3 scripts/roombookingview.py B242
   ```
