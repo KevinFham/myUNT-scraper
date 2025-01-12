@@ -19,7 +19,7 @@ Web scraper tool for visualizing and analyzing aggregated student schedule data 
 - Log into myUNT and automate. This will save and update `.html` files within `./course` for parsing
 
   ```sh
-  python3 scraper.py -t "2024 Fall" CSCE EENG BMEN MEEN MTSE 
+  python3 scraper.py -t "2024 Fall" -x 1 -y 7 CSCE EENG BMEN MEEN MTSE  
   ```
 
 ### `htmlparser.py`

@@ -53,7 +53,7 @@ if __name__ == '__main__':
                         type=str, default='./',
                         help=f'save figure to a specified directory')
 
-    if len(sys.argv) != 2:
+    if len(sys.argv) <= 1:
         print("Invalid usage. Use \"python3 " + sys.argv[0] + " --help\" for instructions")
         exit()
         
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     bookings_save_dir = os.path.abspath(args.save_dir)
 
     room_booking, console_output = schedule_merge(args.room_id)
-    print(console_output)
+    
     df = pd.DataFrame(room_booking, index=np.linspace(0, 23.5, 48), columns=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday',' Saturday'])
     disp = sns.heatmap(df, annot=False, fmt='.4g') 
     disp.set(xlabel="Room " + sys.argv[1] + " Availability", ylabel="Time of Day (24 HR)")
@@ -71,5 +71,5 @@ if __name__ == '__main__':
     if args.save:
         plt.savefig(bookings_save_dir)
     else:
-        plt.show()
-    
+    	print(console_output)
+    	plt.show()

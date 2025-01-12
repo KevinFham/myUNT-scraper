@@ -19,9 +19,7 @@ bookings_dir="./saved_plots/$1/bookings"
 
 echo "Saving to $heatmap_dir/ and $bookings_dir/"
 
-mkdir -p "${heatmap_dir}/CSCE"
-mkdir -p "${heatmap_dir}/EENG"
-mkdir -p "${bookings_dir}"
+mkdir -p ./{${heatmap_dir}/CSCE,${heatmap_dir}/EENG,${bookings_dir}}
 
 python3 heatmap.py -sd ${heatmap_dir}/AllDept.png
 echo Saved AllDept.png
